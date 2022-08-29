@@ -5,14 +5,20 @@
     "private":true,
     "description":"",
     "dependencies":{
-        "coldbox":"^6.0.0"
+        "coldbox":"^6.0.0",
+        "cborm":"^3.9.0+53"
     },
     "devDependencies":{
-        "testbox":"*"
+        "testbox":"*",
+        "route-visualizer":"^1.4.0+24",
+        "cbdebugger":"^3.5.0+64"
     },
     "installPaths":{
-        "coldbox":"coldbox",
-        "testbox":"testbox"
+        "coldbox":"coldbox/",
+        "testbox":"testbox/",
+        "cborm":"modules/cborm/",
+        "route-visualizer":"modules/route-visualizer/",
+        "cbdebugger":"modules/cbdebugger/"
     },
     "testbox":{
         "runner":"http://localhost:60299/tests/runner.cfm"

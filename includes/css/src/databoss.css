@@ -1,0 +1,82 @@
+/* ***********************************************************
+***					CLASS BASED STYLES 
+*********************************************************** */
+.cbox_messagebox { 
+	font-weight:			bold; 
+	margin:					10px; 
+}
+.cbox_messagebox_info { 
+	background:				#D1E6EF url(../images/info.png) no-repeat scroll .5em 50%; 
+	color:					#3760b5; 
+	border:					1px solid #c3d7ff; 
+	margin:					.3em auto; 
+	padding:				0 1em 0 3.5em; 
+}
+.cbox_messagebox_warning { 
+	background:				#FCF8E3 url(../images/warning.png) no-repeat scroll .5em 50%; 
+	color:					#bc6c34; 
+	border:					1px solid #FBEED5; 
+	margin:					.3em auto; 
+	padding:				0 1em 0 3.5em; 
+}
+.cbox_messagebox_error { 
+	background:				#F2DEDE url(../images/error.png) no-repeat scroll .5em 50%; 
+	color:					#b22723; 
+	border:					1px solid #EED3D7; 
+	margin:					.3em auto; 
+	padding:				0 1em 0 3.5em; 
+}
+/* Paging */
+.pagingTabsTotals{ 
+	margin: 				5px 0px; 
+}
+/* Utility */
+.centered { 
+	text-align: 			center !important;
+}
+.inline{ 
+	display: 				inline !important;
+}
+/* ***********************************************************
+***					SORTABLE TABLE STYLES 
+*********************************************************** */
+/* tables */
+.table {
+	font-size: 				12px;
+}
+.table thead tr th, 
+.table tfoot tr th {
+	background-color: 		#CCC;
+	border: 				1px solid #FFF;
+	font-size: 				12px;
+	padding: 				8px;
+}
+.table thead tr .header {
+	background-image: 		url(../images/bg.gif);
+	background-repeat: 		no-repeat;
+	background-position: 	center right;
+	cursor: 				pointer;
+}
+.table thead tr .headerSortUp {
+	background-image: 		url(../images/asc.gif);
+}
+.table thead tr .headerSortDown {
+	background-image: 		url(../images/desc.gif);
+}
+.table thead tr .headerSortDown, 
+.table thead tr .headerSortUp {
+	background-color: 		#8dbdd8;
+}
+.table tbody td {
+	color: 					#3D3D3D;
+	padding: 				5px;
+}
+/** Bootstrap Overrides **/
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+	background-color: #EAEAEA;
+}
+/** Bootstrap 3 hacks and overrides **/
+.icon-white { color: #fff; }
+#main-navbar-collapse > .nav{margin-top:10px;}
+.pagination { margin-top: 5px;}
+.form-actions{ margin: 40px 0px 50px 0px; }
