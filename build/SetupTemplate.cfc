@@ -39,7 +39,7 @@ component {
 		command( "tokenReplace" )
 			.params(
 				path        = "/#variables.cwd#/**",
-				token       = "@MODULE_NAME@",
+				token       = "Databoss",
 				replacement = moduleName
 			)
 			.run();
@@ -47,7 +47,7 @@ component {
 		command( "tokenReplace" )
 			.params(
 				path        = "/#variables.cwd#/**",
-				token       = "@MODULE_SLUG@",
+				token       = "databoss",
 				replacement = moduleSlug
 			)
 			.run();
@@ -55,7 +55,7 @@ component {
 		command( "tokenReplace" )
 			.params(
 				path        = "/#variables.cwd#/**",
-				token       = "@MODULE_DESCRIPTION@",
+				token       = "A Dynamic Administrator for ORM",
 				replacement = moduleDescription
 			)
 			.run();

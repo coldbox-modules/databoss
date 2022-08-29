@@ -7,7 +7,7 @@
     "requestTimeout":"0,0,0,90",
     "robustExceptionEnabled":true,
 	"datasources": {
-        "coolblog": {
+        "databoss": {
             "class":"${DB_CLASS}",
 			"dbdriver": "MySQL",
 			"dsn":"jdbc:mysql://{host}:{port}/{database}",
@@ -15,7 +15,7 @@
             "host":"${DB_HOST:127.0.0.1}",
             "username": "${DB_USER:root}",
             "password": "${DB_PASSWORD}",
-            "database": "coolblog",
+            "database": "databoss",
 			"port": "${DB_PORT:3306}",
 			"storage":"false",
 			"bundleName": "${DB_BUNDLENAME}",

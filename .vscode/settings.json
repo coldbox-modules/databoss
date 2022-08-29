@@ -6,6 +6,11 @@
 			"isPhysicalDirectoryPath": false
 		},
 		{
+			"logicalPath": "/cborm",
+			"directoryPath": "./test-harness/modules/cborm",
+			"isPhysicalDirectoryPath": false
+		},
+		{
 			"logicalPath": "/testbox",
 			"directoryPath": "./test-harness/testbox",
 			"isPhysicalDirectoryPath": false

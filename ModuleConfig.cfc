@@ -6,17 +6,17 @@
 component {
 
 	// Module Properties
-	this.title 				= "@MODULE_NAME@";
+	this.title 				= "Databoss";
 	this.author 			= "Ortus Solutions";
 	this.webURL 			= "https://www.ortussolutions.com";
-	this.description 		= "@MODULE_DESCRIPTION@";
+	this.description 		= "A Dynamic Administrator for ORM";
 	this.version 			= "@build.version@+@build.number@";
 
 	// Model Namespace
-	this.modelNamespace		= "@MODULE_SLUG@";
+	this.modelNamespace		= "databoss";
 
 	// CF Mapping
-	this.cfmapping			= "@MODULE_SLUG@";
+	this.cfmapping			= "databoss";
 
 	// Dependencies
 	this.dependencies 		= [];

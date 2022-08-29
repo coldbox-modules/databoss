@@ -1,14 +1,14 @@
 {
-	"name" 		: "@MODULE_NAME@",
+	"name" 		: "Databoss",
 	"version"   : "1.0.0",
-    "location"  : "https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/@MODULE_SLUG@/@build.version@/@MODULE_SLUG@-@build.version@.zip",
+    "location"  : "https://downloads.ortussolutions.com/ortussolutions/coldbox-modules/databoss/@build.version@/databoss-@build.version@.zip",
 	"author" 	: "Ortus Solutions <info@ortussolutions.com>",
-	"homepage"	: "https://github.com/coldbox-modules/@MODULE_SLUG@",
-	"documentation"		: "https://github.com/coldbox-modules/@MODULE_SLUG@",
-	"repository"		: { "type" : "git", "url" : "https://github.com/coldbox-modules/@MODULE_SLUG@" },
-	"bugs" : "https://github.com/coldbox-modules/@MODULE_SLUG@",
-	"shortDescription"	: "Description goes here",
-	"slug"		: "@MODULE_SLUG@",
+	"homepage"	: "https://github.com/coldbox-modules/databoss",
+	"documentation"		: "https://github.com/coldbox-modules/databoss",
+	"repository"		: { "type" : "git", "url" : "https://github.com/coldbox-modules/databoss" },
+	"bugs" : "https://github.com/coldbox-modules/databoss",
+	"shortDescription"	: "A dynamic administrator for ORM",
+	"slug"		: "databoss",
 	"type"		: "modules",
 	"keywords":"",
 	"license"			: [
@@ -30,7 +30,6 @@
 		"/server*.json"
     ],
 	"scripts":{
-		"setupTemplate": "task run taskFile=build/SetupTemplate.cfc",
 		"build:module":"task run taskFile=build/Build.cfc :projectName=`package show slug` :version=`package show version`",
 		"build:docs":"task run taskFile=build/Build.cfc target=docs :projectName=`package show slug` :version=`package show version`",
         "release":"recipe build/release.boxr",
