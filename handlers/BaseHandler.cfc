@@ -2,21 +2,22 @@
  * Copyright 2012 Ortus Solutions, Corp
  * www.ortussolutions.com
  * ---
- * @author Luis Majano
  * ---
  * Base Databoss Handler
+ *
+ * @author Luis Majano
  */
-component{
+component {
 
 	// Dependencies
-	property name="entityService"    	inject="id:entityService@databoss";
-	property name="metadataService"  	inject="id:metadataService@databoss";
+	property name="entityService"       inject="id:entityService@databoss";
+	property name="metadataService"     inject="id:metadataService@databoss";
 	property name="entityDisplayHelper" inject="id:entityDisplayHelper@databoss";
-	property name="i18n"			 	inject="i18n@cbi18n";
-	property name="logger"				inject="logbox:logger:databoss";
-	property name="moduleSettings"		inject="coldbox:modulesettings:databoss";
-	property name="paging"				inject="id:paging@databoss";
-	property name="htmlHelper"			inject="HTMLHelper@coldbox";
+	property name="i18n"                inject="i18n@cbi18n";
+	property name="logger"              inject="logbox:logger:databoss";
+	property name="moduleSettings"      inject="coldbox:modulesettings:databoss";
+	property name="paging"              inject="id:paging@databoss";
+	property name="htmlHelper"          inject="HTMLHelper@coldbox";
 
 	/**
 	 * preHandler
@@ -30,13 +31,13 @@ component{
 		prc.entityDisplayHelper = entityDisplayHelper;
 
 		// Global Exit Handlers
-		prc.xehEntityList 		= "databoss/entity";
-		prc.xehDataboss			= "databoss";
+		prc.xehEntityList = "databoss/entity";
+		prc.xehDataboss   = "databoss";
 
 		// Global Actions
-		prc.xehDictionaryClean  = "databoss/main/cleanDictionary";
-		prc.xehReloadORM		= "databoss/main/reloadORM";
-		prc.xehReloadApp		= "databoss/main/reloadApp";
+		prc.xehDictionaryClean = "databoss/main/cleanDictionary";
+		prc.xehReloadORM       = "databoss/main/reloadORM";
+		prc.xehReloadApp       = "databoss/main/reloadApp";
 
 		// Get correct paging object if in module mode
 		prc.oPaging = variables.paging;
@@ -44,16 +45,17 @@ component{
 		prc.modRoot = event.getModuleRoot( "databoss" ) & "/";
 
 		// check for locale changes
-		if( event.valueExists( 'locale' ) ){
+		if ( event.valueExists( "locale" ) ) {
 			// validate locale
-			if( arrayFindNoCase( moduleSettings.supportedLanguages, rc.locale ) gt 0 ){
+			if ( arrayFindNoCase( moduleSettings.supportedLanguages, rc.locale ) gt 0 ) {
 				i18n.setFwLocale( rc.locale );
 			}
 		}
 		prc.userLocale = i18n.getFwLocale();
 
 		// Load System Entities
-		prc.systemEntities = metadataService.getPersistedEntities()
+		prc.systemEntities = metadataService
+			.getPersistedEntities()
 			.filter( function( item ){
 				// Are we using only lists?
 				return ( !moduleSettings.entitiesOnly.len() OR moduleSettings.entitiesOnly.findNoCase( item ) );
@@ -64,17 +66,17 @@ component{
 			} );
 
 		// Load System Dictionary
-		prc.systemDictionary 	= metadataService.getDictionary();
+		prc.systemDictionary = metadataService.getDictionary();
 
 		// Only load assets for HTML
-		if( rc.format eq "html" ){
+		if ( rc.format eq "html" ) {
 			/***************************** START PLACEHOLDERS *****************************/
-			//injector:css//
-			addAsset( "#prc.modRoot#includes/css/03825f5a.databoss.min.css ");
-			//endinjector//
-			//injector:js//
-			addAsset( "#prc.modRoot#includes/js/19d42eab.databoss.min.js ");
-			//endinjector//
+			// injector:css//
+			addAsset( "#prc.modRoot#includes/css/03825f5a.databoss.min.css " );
+			// endinjector//
+			// injector:js//
+			addAsset( "#prc.modRoot#includes/js/19d42eab.databoss.min.js " );
+			// endinjector//
 			/***************************** END PLACEHOLDERS *****************************/
 		}
 	}
